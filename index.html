@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Driving_Scene_Prediction">
+  <meta name="author"
+    content="Kang-Won Lee, Dae-Kwan Ko, Yong-Jun Kim, Jee-Hwan Ryu, Soo-Chul Lim">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DexTouch</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Latency-Free Driving Scene Prediction for On-Road Teledriving With Future-Image-Generation</h1>
+            <div class="is-size-5 publication-authors">
+
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=OqqaNNkAAAAJ&hl=ko">Kang-Won Lee</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=vceFZwQAAAAJ&hl=ko&oi=sra">Dae-Kwan Ko</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=vceFZwQAAAAJ&hl=ko&oi=sra">Yong-Jun Kim</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=vceFZwQAAAAJ&hl=ko&oi=sra">Jee-Hwan Ryu</a><sup>*, 2</sup>,</span>
+              <span class="author-block">
+                <a href="http://irobot.dgu.edu/wordpress/">Soo-Chul Lim</a><sup>*, 1</sup>,</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Dongguk University,</span>
+              <span class="author-block"><sup>2</sup>Korea Advanced Institute of Science and Technology (KAIST)</span>
+            </div>
+          </br>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>*</sup>Corresponding Author</span>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">IEEE Transactions on Intelligent Transportation Systems</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper Link. -->
+                <span class="link-block">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10624599" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark"  style="text-decoration: none">
+                    <span class="icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://youtu.be/JyXXZQ-SfLU?si=94ZwcaVkGNzYD44e" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Teledriving could serve as a practical solution for handling unforeseen situations in autonomous driving. 
+              However, the latency of transmission networks remains a prominent concern. 
+              Despite advancements like 5G networks, delays in remote driving scenes cannot be entirely eradicated, potentially leading to unwanted incidents. 
+              While a few attempts have been made to address this issue by predicting the future driving scenes, 
+              these efforts have been restricted in their ability to accurately foresee clear and relevant driving scenarios. 
+              This study presents a method to predict a latency-free future driving scene. 
+              Unlike prior approaches, our method incorporates the command signal of a remote driver into the prediction network, 
+              as well as the past driving video frames and vehicle status. 
+              As a result, we can accurately predict relevant and clear latency-free future driving scenes. 
+              A combination of convolutional long short-term memory (ConvLSTM) and generative adversarial networks (GAN) was utilized in a deep neural network to predict the future driving scenes based on latency. 
+              The dataset was gathered from on-road teledriving experiments, with a maximum vehicle speed of 53 km/h and a driving route length of approximately 1.3 km. 
+              The dataset used to train the deep neural network was gathered from on-road teledriving experiments. 
+              The proposed method can estimate the future driving scene for up to 0.5 s, 
+              surpassing the performance of both baseline video prediction methods and a method that does not utilize the input command of the driver.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe src="https://youtu.be/JyXXZQ-SfLU?si=94ZwcaVkGNzYD44e" frameborder="0"
+                      allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Teleoperated driving system</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this study, an approach to predict future driving videos is developed to feedback latency-free driving video to the operator during teledriving. 
+              Unlike previous studies, command signals are used with delayed information from the vehicle. 
+              Through this, it overcomes the limitations of the existing method that did not reflect the future vehicle state and predict a realistic future driving video that reflects the intention of the driver. 
+              Figure illustrates the proposed network for predicting latency-free driving videos based on the delayed information from the vehicle 
+              (image and status of vehicle) and the command signal (manual input from the teleoperator). 
+              The objective is to overcome latency of up to 0.5 s. This maximum latency was established by considering both the aforementioned impact of latency on human operating ability, the latency of 5G data, and video inference time.
+            </p>
+            <br>
+            <div class="columns is-centered" style="background: #FDFFFF;">
+              <img src="./images/1_Teledriving system.pdf" alt="teaser" width="100%">
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <br>
+  <br>
+  <section class="section">
+    <div class="container">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Teleoperated driving system</h2>
+          <div class="content has-text-justified">
+            <p>
+              As depicted in Figure, the proposed method consists of generator and discriminator networks. 
+              The generator network uses the delayed driving video frames from a specific time (t) and the status information of the remote vehicle at the time t-time as inputs. 
+              In addition, it predicts future frames based on the command signals from the operator.
+            </p>
+            <br>
+            <div class="columns is-centered" style="background: #FDFFFF;">
+              <img src="./images/2_Network architecture.pdf" alt="teaser" width="100%">
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Here</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+</body>
+
+</html>
